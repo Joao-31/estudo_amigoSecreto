@@ -40,6 +40,20 @@ function atualizarLista(){
 
 
 }
-
 adicionarAmigo();
 
+function sortearAmigo(){
+    let indice = Math.floor(Math.random() * amigos.length);
+    console.log(indice);
+    if(amigos.length==0){
+        alert('Nenhum nome pode ser sorteador. Por Favor insira alguns nomes!')
+    }else{
+        let amigoSecreto = amigos[indice];
+
+        alert(amigoSecreto);
+
+        document.getElementById('resultado').innerHTML = `O amigo secreto é ${amigoSecreto}`
+    
+    }
+
+}
